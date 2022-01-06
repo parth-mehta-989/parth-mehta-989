@@ -1,14 +1,30 @@
-def anagram_check(str1,str2):
+def anagram_check(str1: str,str2:str)->str:
+    """
+    This function takes two arguments, each a string. If two strings are anagram of each other i.e. just the rearrangements of each other, then returns a string saying so.
+    Else, returns a string saying the opposite of the earlier string.
+    example 1:
+        str1 = "Listen"
+        str2 = "Silent"
+        return: "The strings are an anagram of each other"
+    example 2:
+        str1 = "Not"
+        str2 = "sat"
+        return: 'The given strings aren\'t an anagram of each other'  
+    """
+    #casefold both strings for comparison as a list
     casefold1=str1.casefold()
     casefold2=str2.casefold()
     list1=list(casefold1)
     list2=list(casefold2)
+    #sorting before comparison
     list1.sort()
     list2.sort()
     if list1==list2:
-        return 'The strings are anagram'
-    return 'The given strings aren\'t an anagram' 
+        return 'The strings are an anagram of each other'
+    return 'The given strings aren\'t an anagram of each other' 
+#infinite loop till the user wants to cancel
 while True:
+    #taking input from the user
     str1=input('enter string 1\n')
     str2=input('enter string 2 \n')
     print(anagram_check(str1,str2))
