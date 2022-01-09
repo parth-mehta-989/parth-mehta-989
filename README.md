@@ -3,7 +3,7 @@
 - 👀 I’m interested in learning and creating stuff that is helpful for the community in some way.
 - 🌱 I’m currently learning Python.
 - 💞️ I’m looking to collaborate on Python Projects
-- 📫 How to reach me via my email - mparth989@gmail.com
+- 📫 You can reach me via my email - mparth989@gmail.com
 
 <!---
 parth-mehta-989/parth-mehta-989 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
