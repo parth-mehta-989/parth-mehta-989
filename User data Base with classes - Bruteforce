@@ -1,0 +1,60 @@
+class User:
+    def __init__(self, name, username, email):
+        self.name=name
+        self.username=username
+        self.email=email
+    def __repr__(self):
+        return f"\nUser --\nUsername:{self.username}\nName:{self.name}\nEmail={self.email} \n"
+    def __str__(self):
+        return self.__repr__()
+class UserDataBase():
+    def __init__(self):
+        self.users=[]
+    def insert(self, user):
+        if self.users==[]:
+            self.users.append(user)
+            print(f"inserted username:{user.username}")
+        else:
+            if self.find(user.username)=="None found":
+                for i in self.users:
+                    if i.username> user.username:
+                        index=self.users.index(i)
+                        self.users.insert(index, user)
+                        break
+                print(f"inserted username:{user.username}")
+            else:
+                print(f"Can't insert username: {user.username}. Already Exists")
+    def find(self,username):
+        for user in self.users:
+            if user.username == username:
+                return user
+            else:
+                return "None found"
+    def list_all(self):
+        return self.users
+    def update(self,user):
+        if self.find(user.username)=="None found":
+            print(f"username: {user.username} does not exist")
+        else:
+            target=self.find(user.username)
+            print(f"\nUpdation process started...\nbefore=>{target}")
+            target.name, target.email = user.name, user.email
+            print(f"Updated {user.username}")
+            print(f"After=>{target}")
+                
+        
+Parth=User("Parth", "pm989", "mparth989@gmail.com")
+Ashutosh=User("Ashutosh", "ashukhoj", "ashutosh.sharma@gvk.com")
+
+Users=UserDataBase()
+Users.insert(Parth)
+Users.insert(Parth)
+#The below statement checks whether a user exists
+#print(Users.find('pm989'))
+Users.insert(Ashutosh)
+Ashutosh=User("Ashutosh Sharma", "ashukhoj", "ashutosh.sharma@gvk.com")
+Users.update(Ashutosh)
+print("\n \n \n", Users.list_all())
+
+
+
